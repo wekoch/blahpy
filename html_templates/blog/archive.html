@@ -1,0 +1,8 @@
+{% if post %}
+	<h2>{{ post.title }}</h2>
+	{{ post.post }}<br>
+	{{ post.pub_date }}
+{% else %}
+	<p>No Blog Posts</p>
+{% endif %}
+<br><a href="/blog/">Back</a>
