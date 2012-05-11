@@ -1,0 +1,9 @@
+{% if latest_post_list %}
+	{% for bp in latest_post_list %}
+		<h2>{{ bp.title }}</h2>
+		{{ bp.post }}<br>
+		{{ bp.pub_date }}
+	{% endfor %}
+{% else %}
+	<p>No Blog Posts.</p>
+{% endif %}
