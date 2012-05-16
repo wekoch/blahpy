@@ -6,5 +6,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^blog/$', 'blog.views.index'),
+	url(r'^blog/archive/(?P<post_id>\d+)/$', 'blog.views.archive'),
     url(r'^admin/', include(admin.site.urls)),
 )

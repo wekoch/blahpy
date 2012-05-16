@@ -1,6 +1,6 @@
 {% if latest_post_list %}
 	{% for bp in latest_post_list %}
-		<h2>{{ bp.title }}</h2>
+	<a href="/blog/archive/{{ bp.id }}/"><h2>{{ bp.title }}</h2></a>
 		{{ bp.post }}<br>
 		{{ bp.pub_date }}
 	{% endfor %}
