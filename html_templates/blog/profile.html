@@ -1,0 +1,8 @@
+{% if user_info %}
+	<h2>{{ user_info.first_name }} {{ user_info.last_name }}</h2>
+	username: {{ user_info.username }}<br>
+	email: {{ user_info.email }}<br>
+{% else %}
+	<p>No User with that user ID</p>
+{% endif %}
+<br><a href="/blog/">Back</a>
