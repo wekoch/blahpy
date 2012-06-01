@@ -23,3 +23,5 @@ def profile(request, users_id):
 		raise Http404
 	return render_to_response('blog/profile.html', {'user_info': user_info})
 
+def pageviews(request, file_name):
+	return render_to_response('blog/' + file_name + '.html')
