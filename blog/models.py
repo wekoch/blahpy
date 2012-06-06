@@ -20,3 +20,11 @@ class Post(models.Model):
 
 	def __unicode__(self):
 		return self.title
+
+class Links(models.Model):
+	link = models.CharField(max_length=140)
+	link_name = models.CharField(max_length=75)
+	user = models.ForeignKey(Users)
+
+	def __unicode__(self):
+		return self.link_name

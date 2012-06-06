@@ -1,12 +1,12 @@
 from django.shortcuts import render_to_response
-from blog.models import Post, Users
+from blog.models import Post, Users, Links
 from django.http import Http404
 
 def index(request):
 	latest_post_list = Post.objects.all().order_by('-pub_date')[:5]
-	u = Users.objects.all()
+	links_list = Links.objects.all()
 	return render_to_response('blog/index.html', {'latest_post_list': latest_post_list,
-												   'user_info': u})
+												   'links_list': links_list})
 
 def archive(request, post_id):
 	try:
